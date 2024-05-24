@@ -1,0 +1,166 @@
+{
+  "api": {
+    "name": "VapiPlugin",
+    "slug": "vapiplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "start",
+        "signature": "(options: { assistantId: string; }) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ assistantId: string; }"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "start"
+      },
+      {
+        "name": "stop",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "stop"
+      },
+      {
+        "name": "configure",
+        "signature": "(options: { publicKey: string; }) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ publicKey: string; }"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "configure"
+      },
+      {
+        "name": "setMuted",
+        "signature": "(options: { muted: boolean; }) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ muted: boolean; }"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "setmuted"
+      },
+      {
+        "name": "send",
+        "signature": "(options: { type: string; control: string; }) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ type: string; control: string; }"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "send"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: VapiEventNames, listenerFunc: (event: any) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "VapiEventNames"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "(event: any) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "VapiEventNames"
+        ],
+        "slug": "addlistenervapieventnames-"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "PluginListenerHandle",
+      "slug": "pluginlistenerhandle",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "remove",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "() => Promise<void>"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [
+    {
+      "name": "VapiEventNames",
+      "slug": "vapieventnames",
+      "docs": "",
+      "types": [
+        {
+          "text": "'call-end'",
+          "complexTypes": []
+        },
+        {
+          "text": "'call-start'",
+          "complexTypes": []
+        },
+        {
+          "text": "'volume-level'",
+          "complexTypes": []
+        },
+        {
+          "text": "'speech-start'",
+          "complexTypes": []
+        },
+        {
+          "text": "'speech-end'",
+          "complexTypes": []
+        },
+        {
+          "text": "'message'",
+          "complexTypes": []
+        },
+        {
+          "text": "'error'",
+          "complexTypes": []
+        }
+      ]
+    }
+  ],
+  "pluginConfigs": []
+}

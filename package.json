@@ -1,7 +1,7 @@
 {
   "name": "vapi-capacitor",
   "version": "0.0.1",
-  "description": "Plugin for integrating with the Vapi API",
+  "description": "Plugin for integrating with Vapi",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -10,12 +10,10 @@
     "android/src/main/",
     "android/build.gradle",
     "dist/",
-    "ios/Sources",
-    "ios/Tests",
-    "Package.swift",
+    "ios/Plugin/",
     "VapiCapacitor.podspec"
   ],
-  "author": "tripp",
+  "author": "summit",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -31,7 +29,7 @@
   ],
   "scripts": {
     "verify": "npm run verify:ios && npm run verify:android && npm run verify:web",
-    "verify:ios": "xcodebuild -scheme VapiCapacitor -destination generic/platform=iOS",
+    "verify:ios": "cd ios && pod install && xcodebuild -workspace Plugin.xcworkspace -scheme Plugin -destination generic/platform=iOS && cd ..",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
     "verify:web": "npm run build",
     "lint": "npm run eslint && npm run prettier -- --check && npm run swiftlint -- lint",

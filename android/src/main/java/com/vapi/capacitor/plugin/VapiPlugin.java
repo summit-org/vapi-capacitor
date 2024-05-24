@@ -12,11 +12,12 @@ public class VapiPlugin extends Plugin {
     private Vapi implementation = new Vapi();
 
     @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
+    public void start(PluginCall call) {
+        call.resolve();
+    }
 
-        JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
-        call.resolve(ret);
+    @PluginMethod
+    public void stop(PluginCall call) {
+        call.resolve();
     }
 }
